@@ -33,6 +33,7 @@ Neste desafio, o objetivo é abrir um arquivo, tratar e criar uma pipeline utili
 - A terceira para criar e concatenar o DF;
 - A quarta para tratar o arquivo.
 
+8. Uma vez que tive problemas para subir o container com o LibreOffice, realizei uma pequena alteração: subi o arquivo já convertido para xlsx no bucket e alterei a dag para realizar as tratativas em cima desse arquivo.
 
 ## Conclusões
 
@@ -45,4 +46,11 @@ Após a consolidação do arquivo, utilizei a GCP para criar um projeto ('raizen
 ![Composer](./assets/codigo_dag_composer.png 'Código da Dag no Composer')
 
 Tentei executar o projeto, mas percebi um problema para transportar o arquivo entre a primeira task e a task do container. Por conta do tempo, não foi possível finalizar.
-No entanto, este é um To Do. Finalizarei com maior tempo de pesquisa.
+
+Após a alteração da dag e mais algumas tentativas, consegui rodar o arquivo no Airflow.
+
+![Composer](./assets/airflow_pipeline_ok.png 'Pipeline rodando no Airflow')
+
+![Composer](./assets/dag9.png 'Pipeline no Airflow')
+
+Contudo, fazer rodar a conversão do arquivo continua a ser um To Do. Finalizarei com maior tempo de pesquisa.
